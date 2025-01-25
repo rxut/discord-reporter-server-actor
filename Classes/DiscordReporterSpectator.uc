@@ -12,7 +12,6 @@ function Engage(DiscordReporter InController, DiscordReporterLink InLink)
   local DiscordReporterMutator Mut;
   local Mutator M;
   local string GameClass;
-  local bool bOneOnOne;
 
   Controller = InController;
   Link = InLink;
@@ -21,12 +20,6 @@ function Engage(DiscordReporter InController, DiscordReporterLink InLink)
   GameClass = caps(GetItemName(string(Level.Game.Class)));
   if (GameClass == "DEATHMATCHPLUS" || GameClass == "EUTDEATHMATCHPLUS")
   {
-    if (Level.Game.MaxPlayers == 2)
-    {
-      StatsClass = class'DiscordReporterStats_1on1';
-      bOneOnOne = True;
-    }
-    else
       StatsClass = class'DiscordReporterStats_DM';
   }
   else if (GameClass == "TEAMGAMEPLUS" || GameClass == "EUTTEAMGAMEPLUS")

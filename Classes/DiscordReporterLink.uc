@@ -160,16 +160,6 @@ function SendNotice(string nick, string msg)
     SendBufferedData("@" $ nick $ ":" @ msg $ CRLF);
 }
 
-// function AddLine(string line)
-// {
-//   local int ilHead;
-//   ilHead = (ifHead + 1) % 32;
-//   if (ilHead != ifFoot) {
-//     sQueue[ifHead] = line;
-//     ifHead = ilHead;
-//     ifCount = Min(ifCount + 1, 32);
-//   }
-// }
 
 // Quit from Discord Bot
 function SendQuit(string msg)

@@ -32,7 +32,7 @@ function SendMessage(string msg, optional bool bNoTime)
     local string Message;
 
     // Check is null or blank
-    if (msg == "" || msg == conf.colHead)
+    if (msg == "")
         return;
 
     // Check if EUT MMI's are in the message
